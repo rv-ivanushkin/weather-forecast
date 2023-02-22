@@ -2,7 +2,14 @@
 
 it's a project for understanding how to fetch forecast by city's name from https://open-meteo.com/.
 
+# Examples for develop
 
+<p align="center">
+  <img src="./docs/ui/days.png" alt="drawing"/>
+</p>
+<p align="center">
+  <img src="./docs/ui/hours.png" alt="drawing"/>
+</p>
 
 # Technical stack
 
