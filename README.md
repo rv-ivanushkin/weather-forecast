@@ -18,8 +18,6 @@ it's a project for understanding how to fetch forecast by city's name from https
 - MUI themes
 - Vite instead of webpack and cra
 
-)
-
 # Sources
 - [RTK Query](https://redux-toolkit.js.org/rtk-query/overview)
   - [Utilities](https://redux-toolkit.js.org/rtk-query/api/created-api/api-slice-utils)
