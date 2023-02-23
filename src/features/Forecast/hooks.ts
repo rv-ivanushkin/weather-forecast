@@ -1,7 +1,6 @@
 import { debounce } from '@mui/material'
 import { useRef, useEffect, useState, useMemo } from 'react'
 import { useActionCreators, useAppDispatch, useAppSelector } from 'src/hooks'
-import { DEFAULT_CITY } from './constants'
 import { searchCityByName } from './services'
 import {
   forecastSlice,

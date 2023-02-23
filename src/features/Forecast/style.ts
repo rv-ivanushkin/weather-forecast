@@ -28,6 +28,7 @@ export const HoursStyled = styled(PaperContentStyled)`
   border-radius: inherit;
   scrollbar-width: thin;
 
+  // for future
   /* &:hover {
     overflow-x: auto;
   }

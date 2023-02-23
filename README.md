@@ -19,6 +19,7 @@ it's a project for understanding how to fetch forecast by city's name from https
   <img src="./docs/ui/hours.png" alt="drawing"/>
 </p>
 
+
 # Technical stack
 
 - TypeScript
