@@ -78,11 +78,10 @@ export const CityForForecast = () => {
               alt=""
             />
           </ListItemIcon>
-          <ListItemText>
+          <ListItemText
+            secondary={`${option.latitude}, ${option.latitude}, ${option.timezone}`}
+          >
             <Typography variant="subtitle1">{option.name}</Typography>
-            <Typography variant="caption" color="grey">
-              ({`${option.latitude}, ${option.latitude}`}), {option.timezone}
-            </Typography>
           </ListItemText>
         </ListItem>
       )}

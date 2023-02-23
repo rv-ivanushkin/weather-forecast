@@ -9,6 +9,6 @@ export const LayoutsStyled = styled(Box)`
     theme.palette.mode === 'light'
       ? theme.palette.grey[300]
       : theme.palette.background.default};
-  padding: 10px;
+  padding: 40px 0;
   gap: 20px;
 `
