@@ -1,9 +1,10 @@
 import React, { useMemo, useState } from 'react'
 import {
   Autocomplete,
+  Avatar,
   debounce,
   ListItem,
-  ListItemIcon,
+  ListItemAvatar,
   ListItemText,
   TextField,
   Typography,
@@ -24,6 +25,10 @@ export const CityForForecast = () => {
   const dispatch = useAppDispatch()
   const [value, setValue] = useState<CityProps | null | undefined>(null)
   const [options, setOptions] = useState<CityProps[]>([])
+
+  const placeholder =
+    (value && `${value.latitude}, ${value.latitude}, ${value.timezone}`) ||
+    'Select City'
 
   const handlerSearch = async (name: string) => {
     if (name) {
@@ -66,22 +71,20 @@ export const CityForForecast = () => {
       }}
       renderInput={(params) => (
         // eslint-disable-next-line react/jsx-props-no-spreading
-        <TextField {...params} label="Select City" fullWidth />
+        <TextField {...params} label={placeholder} fullWidth />
       )}
       renderOption={(props, option: CityProps) => (
         // eslint-disable-next-line react/self-closing-comp, react/jsx-props-no-spreading
         <ListItem {...props} key={`${option.id}`} dense>
-          <ListItemIcon>
-            <img
+          <ListItemAvatar>
+            <Avatar
               src={`${SVG_ULR}${option.country_code.toLowerCase()}.svg`}
-              width="24"
-              alt=""
             />
-          </ListItemIcon>
+          </ListItemAvatar>
           <ListItemText
             secondary={`${option.latitude}, ${option.latitude}, ${option.timezone}`}
           >
-            <Typography variant="subtitle1">{option.name}</Typography>
+            <Typography variant="body2">{option.name}</Typography>
           </ListItemText>
         </ListItem>
       )}
