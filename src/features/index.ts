@@ -1,2 +1,2 @@
 export * from './ToggleThemeMode'
-export * from './CityForForecast'
+export * from './Forecast'

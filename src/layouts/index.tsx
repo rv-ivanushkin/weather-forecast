@@ -1,7 +1,7 @@
 import { createTheme, Paper, ThemeProvider } from '@mui/material'
 import React, { useMemo } from 'react'
 import { WeatherForecastInfo } from 'src/components'
-import { CityForForecast, selectThemeMode, ToggleThemeMode } from 'src/features'
+import { selectThemeMode, Forecast } from 'src/features'
 import { useAppSelector } from 'src/hooks'
 import { defaultOptions } from 'src/theme'
 import { LayoutsStyled } from './style'
@@ -23,8 +23,7 @@ export const Layouts = () => {
   return (
     <ThemeProvider theme={theme}>
       <LayoutsStyled>
-        <CityForForecast />
-        <Paper />
+        <Forecast />
         <WeatherForecastInfo />
       </LayoutsStyled>
     </ThemeProvider>

@@ -1,11 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { themeModeSlice } from 'src/features'
-import { cityForForecastSlice } from 'src/features/CityForForecast/slice'
+import { forecastSlice } from 'src/features/'
 
 export const store = configureStore({
   reducer: {
     themeMode: themeModeSlice.reducer,
-    cityForForecast: cityForForecastSlice.reducer,
+    [forecastSlice.name]: forecastSlice.reducer,
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(),
 })
